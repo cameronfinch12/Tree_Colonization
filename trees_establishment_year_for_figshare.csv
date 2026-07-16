@@ -1,0 +1,86 @@
+plot_num = unique ID for each plot in the experiment,,,,,,
+blk = spatial block (numbered 1-5),,,,,,
+"nutrients = nutrient supply to plots (2 levels); fertilized with NPK (10 g nutrients m-2 yr-1), unfertilized (i.e., control)",,,,,,
+"consumers = presence of aboveground fungal pathogens and insect herbivores in a plot (2 levels); sprayed with fungicide and insecticide, unsprayed (i.e., control)  ",,,,,,
+richness = initial richness of plots (2 levels); planted as either monocultures (1 species) or polycultures (5 species),,,,,,
+community_comp = one of 12 possible community compositions (6 monocultures; 6 5-species polycultures),,,,,,
+"year_est = year in which trees first colonized each plot; 0 = 2012, 3 = 2015",,,,,,
+,,,,,,
+This file only includes data from plots which were colonized by trees,,,,,,
+,,,,,,
+plot_num,blk,nutrients,consumers,richness,community_comp,year_est
+1_12,1,Unfertilized,Unsprayed,Monoculture,PAAN_Monoculture,1
+1_14,1,Fertilized,Unsprayed,Polyculture,SEPA_Polyculture,0
+1_15,1,Unfertilized,Sprayed,Polyculture,PAAN_Polyculture,0
+1_19,1,Unfertilized,Sprayed,Polyculture,SEPA_Polyculture,2
+1_21,1,Unfertilized,Sprayed,Polyculture,SOPI_Polyculture,2
+1_26,1,Fertilized,Unsprayed,Polyculture,TRFL_Polyculture,3
+1_3,1,Fertilized,Sprayed,Monoculture,PAAN_Monoculture,0
+1_31,1,Unfertilized,Unsprayed,Monoculture,SEPA_Monoculture,3
+1_34,1,Unfertilized,Unsprayed,Polyculture,ANVI_Polyculture,2
+1_37,1,Unfertilized,Unsprayed,Polyculture,SEPA_Polyculture,0
+1_41,1,Fertilized,Unsprayed,Monoculture,SCIN_Monoculture,0
+1_44,1,Unfertilized,Unsprayed,Polyculture,TRFL_Polyculture,2
+1_46,1,Fertilized,Unsprayed,Monoculture,PAAN_Monoculture,0
+1_50,1,Fertilized,Unsprayed,Monoculture,TRFL_Monoculture,0
+1_53,1,Fertilized,Sprayed,Polyculture,SEPA_Polyculture,2
+1_54,1,Unfertilized,Sprayed,Monoculture,SCIN_Monoculture,0
+1_61,1,Unfertilized,Sprayed,Monoculture,SOPI_Monoculture,0
+1_7,1,Unfertilized,Sprayed,Polyculture,ANVI_Polyculture,1
+1_8,1,Unfertilized,Sprayed,Polyculture,TRFL_Polyculture,0
+2_14,2,Unfertilized,Sprayed,Monoculture,SCIN_Monoculture,0
+2_15,2,Unfertilized,Sprayed,Polyculture,TRFL_Polyculture,0
+2_16,2,Unfertilized,Sprayed,Monoculture,SOPI_Monoculture,1
+2_20,2,Fertilized,Unsprayed,Monoculture,PAAN_Monoculture,0
+2_21,2,Unfertilized,Sprayed,Polyculture,SCIN_Polyculture,0
+2_22,2,Fertilized,Sprayed,Monoculture,PAAN_Monoculture,0
+2_23,2,Unfertilized,Sprayed,Polyculture,SEPA_Polyculture,0
+2_24,2,Fertilized,Unsprayed,Polyculture,SEPA_Polyculture,0
+2_26,2,Unfertilized,Unsprayed,Polyculture,SCIN_Polyculture,3
+2_27,2,Unfertilized,Sprayed,Monoculture,TRFL_Monoculture,1
+2_33,2,Fertilized,Unsprayed,Polyculture,TRFL_Polyculture,0
+2_38,2,Fertilized,Sprayed,Monoculture,TRFL_Monoculture,0
+2_4,2,Fertilized,Unsprayed,Polyculture,PAAN_Polyculture,1
+2_40,2,Fertilized,Sprayed,Monoculture,SOPI_Monoculture,0
+2_46,2,Fertilized,Sprayed,Monoculture,SCIN_Monoculture,0
+2_5,2,Unfertilized,Unsprayed,Polyculture,PAAN_Polyculture,2
+2_56,2,Fertilized,Unsprayed,Polyculture,ANVI_Polyculture,0
+2_58,2,Unfertilized,Unsprayed,Monoculture,PAAN_Monoculture,3
+2_6,2,Fertilized,Sprayed,Polyculture,SEPA_Polyculture,2
+2_61,2,Unfertilized,Unsprayed,Monoculture,SCIN_Monoculture,2
+2_62,2,Unfertilized,Unsprayed,Monoculture,TRFL_Monoculture,2
+2_64,2,Unfertilized,Unsprayed,Polyculture,SOPI_Polyculture,2
+3_1,3,Unfertilized,Unsprayed,Monoculture,SOPI_Monoculture,2
+3_19,3,Unfertilized,Sprayed,Polyculture,SOPI_Polyculture,0
+3_2,3,Unfertilized,Sprayed,Monoculture,TRFL_Monoculture,2
+3_25,3,Unfertilized,Unsprayed,Monoculture,ANVI_Monoculture,2
+3_37,3,Unfertilized,Unsprayed,Polyculture,SCIN_Polyculture,0
+3_42,3,Fertilized,Unsprayed,Polyculture,SEPA_Polyculture,1
+3_47,3,Unfertilized,Unsprayed,Polyculture,TRFL_Polyculture,3
+3_52,3,Fertilized,Unsprayed,Monoculture,SOPI_Monoculture,1
+3_55,3,Unfertilized,Unsprayed,Polyculture,SEPA_Polyculture,0
+3_7,3,Unfertilized,Unsprayed,Polyculture,ANVI_Polyculture,3
+3_9,3,Fertilized,Sprayed,Monoculture,PAAN_Monoculture,0
+4_10,4,Unfertilized,Sprayed,Polyculture,SEPA_Polyculture,2
+4_11,4,Unfertilized,Sprayed,Monoculture,PAAN_Monoculture,0
+4_18,4,Fertilized,Unsprayed,Monoculture,SOPI_Monoculture,1
+4_29,4,Unfertilized,Unsprayed,Polyculture,TRFL_Polyculture,1
+4_31,4,Fertilized,Unsprayed,Monoculture,PAAN_Monoculture,0
+4_34,4,Fertilized,Sprayed,Monoculture,PAAN_Monoculture,2
+4_4,4,Unfertilized,Unsprayed,Polyculture,SEPA_Polyculture,2
+4_49,4,Unfertilized,Unsprayed,Polyculture,ANVI_Polyculture,1
+4_55,4,Fertilized,Unsprayed,Monoculture,ANVI_Monoculture,3
+4_56,4,Unfertilized,Unsprayed,Polyculture,PAAN_Polyculture,1
+5_11,5,Fertilized,Unsprayed,Polyculture,ANVI_Polyculture,1
+5_25,5,Unfertilized,Unsprayed,Monoculture,PAAN_Monoculture,0
+5_36,5,Unfertilized,Sprayed,Monoculture,SEPA_Monoculture,3
+5_4,5,Unfertilized,Unsprayed,Monoculture,TRFL_Monoculture,0
+5_46,5,Unfertilized,Unsprayed,Polyculture,PAAN_Polyculture,1
+5_47,5,Fertilized,Sprayed,Monoculture,ANVI_Monoculture,3
+5_5,5,Unfertilized,Sprayed,Monoculture,TRFL_Monoculture,0
+5_56,5,Unfertilized,Unsprayed,Polyculture,SOPI_Polyculture,1
+5_58,5,Unfertilized,Unsprayed,Polyculture,TRFL_Polyculture,3
+5_59,5,Unfertilized,Unsprayed,Polyculture,ANVI_Polyculture,2
+5_6,5,Fertilized,Sprayed,Monoculture,TRFL_Monoculture,0
+5_64,5,Unfertilized,Sprayed,Polyculture,SOPI_Polyculture,0
+5_9,5,Unfertilized,Sprayed,Monoculture,PAAN_Monoculture,0
