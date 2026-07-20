@@ -107,13 +107,53 @@ plots <- plots %>%
   select(-c(ends_with(".y")))
 
 # Get rid of '.x'
+plots <- plots %>%
+  rename_with(~str_remove(., "\\.x$"))
+
 # Create 0/1 Species Columns (Outcomes)
 plots <- plots %>%
   mutate(
-    ANVI = as.integer(str_detect(community_comp, "ANVI")),
-    PAAN = as.integer(str_detect(community_comp, "PAAN")),
-    SCIN = as.integer(str_detect(community_comp, "SCIN")),
-    SEPA = as.integer(str_detect(community_comp, "SEPA")),
-    SOPI = as.integer(str_detect(community_comp, "SOPI")),
-    TRFL = as.integer(str_detect(community_comp, "TRFL"))
+    ANVI = as.integer(str_detect(community_comp, "ANVI.outcome")),
+    PAAN = as.integer(str_detect(community_comp, "PAAN.outcome")),
+    SCIN = as.integer(str_detect(community_comp, "SCIN.outcome")),
+    SEPA = as.integer(str_detect(community_comp, "SEPA.outcome")),
+    SOPI = as.integer(str_detect(community_comp, "SOPI.outcome")),
+    TRFL = as.integer(str_detect(community_comp, "TRFL.outcome"))
   )
+
+# Replace NAs with 0 when necessary
+plots <- plots %>%
+  mutate(
+    across(
+      where(is.numeric),
+      ~if_else(is.na(.x), 0, .x)
+    )
+  )
+
+# Fixing empty community_comp entries
+plots <- plots %>%
+  mutate(
+    richness = if_else(
+      str_detect(community_comp, "Polyculture"), "Polyculture", "Monoculture"
+    )
+  )
+
+# Grouping desirability columns for easy access
+desirability <- c('AvgHeight', 'Duration', 'AvgBD', 'Trees2015', 'rich_colherbs')
+
+# Moving desirability columns, deleting some unnecessary
+plots <- plots %>%
+  relocate(
+    all_of(desirability), .after = "TRFL"
+    ) %>%
+  select(
+    -c("tree_presence", "pinus_presence")
+  ) 
+
+plots <- plots %>% 
+  relocate(
+    "community_comp", .after = "Replicate"
+  )
+
+# Writing Final CSV
+write_csv(plots, "data_TC")
