@@ -192,7 +192,7 @@ plots <- plots %>%
 
 # Adding .initial to environmental variables, deleting community_comp
 plots <- plots %>%
-  rename_with(~ paste0(.x, ".initial"), all_of(desirability)) %>%
+  rename_with(~ paste0(.x, ".initial"), c(Pesticide, Nitrogen)) %>%
   select(
     -c("community_comp")
   )

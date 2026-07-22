@@ -1,4 +1,4 @@
-Plot,Replicate,Pesticide,Nitrogen,richness,ANVI.outcome,PAAN.outcome,SCIN.outcome,SEPA.outcome,SOPI.outcome,TRFL.outcome,AvgHeight.initial,Duration.initial,AvgBD.initial,Trees2015.initial,rich_colherbs.initial
+Plot,Replicate,Pesticide.initial,Nitrogen.initial,richness,ANVI.outcome,PAAN.outcome,SCIN.outcome,SEPA.outcome,SOPI.outcome,TRFL.outcome,AvgHeight,Duration,AvgBD,Trees2015,rich_colherbs
 1_1,1,Sprayed,Fertilized,Polyculture,1,1,1,1,1,0,0,0,0,0,10
 1_10,1,Sprayed,Unfertilized,Polyculture,1,1,0,1,1,1,0,0,0,0,10
 1_11,1,Sprayed,Fertilized,Monoculture,1,0,0,0,0,0,0,0,0,0,11
