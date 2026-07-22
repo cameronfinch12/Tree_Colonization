@@ -113,12 +113,47 @@ plots <- plots %>%
 # Create 0/1 Species Columns (Outcomes)
 plots <- plots %>%
   mutate(
-    ANVI = as.integer(str_detect(community_comp, "ANVI.outcome")),
-    PAAN = as.integer(str_detect(community_comp, "PAAN.outcome")),
-    SCIN = as.integer(str_detect(community_comp, "SCIN.outcome")),
-    SEPA = as.integer(str_detect(community_comp, "SEPA.outcome")),
-    SOPI = as.integer(str_detect(community_comp, "SOPI.outcome")),
-    TRFL = as.integer(str_detect(community_comp, "TRFL.outcome"))
+    ANVI = case_when(
+      community_comp == "ANVI_Monoculture" ~ 1,
+      str_detect(community_comp, "Polyculture") &
+        !str_detect(community_comp, "ANVI") ~ 1,
+      TRUE ~ 0
+    ),
+    
+    PAAN = case_when(
+      community_comp == "PAAN_Monoculture" ~ 1,
+      str_detect(community_comp, "Polyculture") &
+        !str_detect(community_comp, "PAAN") ~ 1,
+      TRUE ~ 0
+    ),
+    
+    SCIN = case_when(
+      community_comp == "SCIN_Monoculture" ~ 1,
+      str_detect(community_comp, "Polyculture") &
+        !str_detect(community_comp, "SCIN") ~ 1,
+      TRUE ~ 0
+    ),
+    
+    SEPA = case_when(
+      community_comp == "SEPA_Monoculture" ~ 1,
+      str_detect(community_comp, "Polyculture") &
+        !str_detect(community_comp, "SEPA") ~ 1,
+      TRUE ~ 0
+    ),
+    
+    SOPI = case_when(
+      community_comp == "SOPI_Monoculture" ~ 1,
+      str_detect(community_comp, "Polyculture") &
+        !str_detect(community_comp, "SOPI") ~ 1,
+      TRUE ~ 0
+    ),
+    
+    TRFL = case_when(
+      community_comp == "TRFL_Monoculture" ~ 1,
+      str_detect(community_comp, "Polyculture") &
+        !str_detect(community_comp, "TRFL") ~ 1,
+      TRUE ~ 0
+    )
   )
 
 # Replace NAs with 0 when necessary
@@ -157,10 +192,15 @@ plots <- plots %>%
 
 # Adding .initial to environmental variables, deleting community_comp
 plots <- plots %>%
-  rename_with(~ paste(.x, ".initial"), all_of(desirability)) %>%
+  rename_with(~ paste0(.x, ".initial"), all_of(desirability)) %>%
   select(
     -c("community_comp")
   )
 
+#Add .outcome to each species column
+plots <- plots %>%
+  rename_with(~ paste0(.x, ".outcome"), c("ANVI", "PAAN", "SCIN", "SEPA", "SOPI", "TRFL"))
+
 # Writing Final CSV
 write_csv(plots, "data_Tree_Colonization.csv")
+
