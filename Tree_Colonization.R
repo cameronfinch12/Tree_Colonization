@@ -155,5 +155,12 @@ plots <- plots %>%
     "community_comp", .after = "Replicate"
   )
 
+# Adding .initial to environmental variables, deleting community_comp
+plots <- plots %>%
+  rename_with(~ paste(.x, ".initial"), all_of(desirability)) %>%
+  select(
+    -c("community_comp")
+  )
+
 # Writing Final CSV
-write_csv(plots, "data_TC")
+write_csv(plots, "data_Tree_Colonization.csv")
