@@ -1,6 +1,6 @@
 METADATA:
 
-Species Code
+**Species Code**
 
 Andropogon virginicus: ANVI
 
@@ -16,7 +16,7 @@ Solidago pinetorum: SOPI
 
 Initial = 2012, Final = 2015
 
-Column Key
+**Column Key**
 
 Pesticide.initial: Whether or not pesticide was sprayed (Environmental Axis)
 
